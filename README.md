@@ -1,28 +1,31 @@
 # sudoku-algorithm-compare
 
 This project will help me see how two algorithms to solve a sudoku puzzle
-computationally are different in speed and memory used.
+computationally are different in complexity, time it takes me to code, 
+and memory used.
 
 ## Algorithm 1: Backtracking
 
 If you have been looking through my other projects on Github, you may notice
 that I am intrigued with using backtracking to solve a sudoku puzzle. While
 there are many ways to solve a sudoku puzzle, backtracking is a simple way
-conceptually for a computer, but some humans would call it "brute force" that
+conceptually for a computer. Unfortunately, that is the only thing it has going
+for it. Backtracking is a O(N!) problem which is worse then the benchmark
+O(aN^b) polinomial time. Also, some humans would call it "brute force" that
 does not take into consideration much of the natural unit of the puzzle itself.
 the psudocode is as follows:
 
 
 function backtrack:
     advance the current box to the next open box (reading left to right then top
-                                                                        to bottom
+                                                                      to bottom)
     if the last box has been validated:
         algorithim finished
     else:
         for each number from 1 to 9:
             put the number in the current box
             if the number does not appear in the current row, column or 3x3 box:
-                it could be that box's correct number. call backtrack again
+                it could be that box's correct number. call backtrack again.
 
 
 ## Algorithm 2: Human
